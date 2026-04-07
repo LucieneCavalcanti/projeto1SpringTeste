@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "tbcategorias")
 public class CategoriaEntity {
-    @Id
+    @Id //chave primária
     @GeneratedValue(strategy = 
         GenerationType.IDENTITY)
     private int id;

@@ -2,6 +2,7 @@ package br.edu.fatecriopreto.projeto1.entities;
 
 import org.hibernate.annotations.ManyToAny;
 
+import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,4 +30,6 @@ public class ProdutoEntity {
     @ManyToOne
     @JoinColumn(name="idcategoria", nullable = false)
     private CategoriaEntity categoria;
+    @Nullable
+    private double precoCusto;
 }
