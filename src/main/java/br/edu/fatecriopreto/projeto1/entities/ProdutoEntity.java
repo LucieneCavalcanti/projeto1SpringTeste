@@ -1,6 +1,8 @@
 package br.edu.fatecriopreto.projeto1.entities;
 
 import org.hibernate.annotations.ManyToAny;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.bind.DefaultValue;
 
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
@@ -31,5 +33,6 @@ public class ProdutoEntity {
     @JoinColumn(name="idcategoria", nullable = false)
     private CategoriaEntity categoria;
     @Nullable
+    @Value("precoCusto=0")
     private double precoCusto;
 }
